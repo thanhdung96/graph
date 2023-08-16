@@ -1,0 +1,15 @@
+type Department {
+    id: ID!
+    name: String
+    created: String
+    modified: String
+    deleted: String!
+}
+
+input CreateDepartment {
+    name: String
+}
+
+input UpdateDepartment {
+    name: String
+}

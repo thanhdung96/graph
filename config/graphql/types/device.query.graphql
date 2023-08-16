@@ -1,0 +1,10 @@
+type DeviceQuery {
+    device(id: ID): Device!
+    devices: [Device!]
+}
+
+type DeviceMutation {
+    newDevice(device: CreateDevice!): Device!
+    updateDevice(id: ID, device: UpdateDevice!): Device!
+    assignDevice(empId: ID, deviceId: ID): Device!
+}
