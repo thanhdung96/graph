@@ -20,5 +20,14 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Resolver\DeviceResolverMap:
+        tags:
+            - { name: overblog_graphql.resolver_map, schema: device }
+    App\Resolver\DepartmentResolverMap:
+        tags:
+            - { name: overblog_graphql.resolver_map, schema: department }
+    App\Resolver\EmployeeResolverMap:
+        tags:
+            - { name: overblog_graphql.resolver_map, schema: employee }
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

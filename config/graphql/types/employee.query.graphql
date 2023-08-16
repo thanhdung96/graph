@@ -1,0 +1,10 @@
+type EmployeeQuery {
+    employee (id: ID): Employee!
+    employees: [Employee!]
+    employeesByDept (deptId: ID): [Employee!]
+}
+
+type EmployeeMutation {
+    createEmployee (employee: CreateEmployee): Employee!
+    updateEmployee (id: ID, employee: UpdateEmployee): Employee!
+}

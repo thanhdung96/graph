@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Uid\Uuid;
 
 #[ORM\Entity(repositoryClass: EmployeeRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Employee
 {
     #[ORM\Id]
@@ -66,6 +67,17 @@ class Employee
         $this->modified = $timestamp;
         $this->id = Uuid::v7()->generate($timestamp);
         $this->devices = new ArrayCollection();
+    }
+
+    #[ORM\PreUpdate]
+    public function updateTimestamp(): void
+    {
+        $timestamp = new \DateTime();
+
+        $this->modified = $timestamp;
+        if(is_null($this->created)) {
+            $this->created = $timestamp;
+        }
     }
 
     public function getId(): string
