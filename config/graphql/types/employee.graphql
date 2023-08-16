@@ -1,0 +1,42 @@
+type Employee {
+    firstName: String
+    lastName: String
+    gender: Boolean
+    salary: Float!
+    phoneNumber: String!
+    motorBrand: String!
+    plateNumber: String!
+    nationality: String
+    departmentSupervised: Department!
+    department: Department!
+    created: String
+    modified: String
+    deleted: String!
+}
+
+input CreateEmployee {
+    firstName: String
+    lastName: String
+    gender: Boolean
+    salary: Float!
+    phoneNumber: String!
+    motorBrand: String!
+    plateNumber: String!
+    nationality: String
+    departmentSupervised: ID!
+    department: ID
+}
+
+input UpdateEmployee {
+    firstName: String!
+    lastName: String!
+    gender: Boolean!
+    salary: Float!
+    phoneNumber: String!
+    motorBrand: String!
+    plateNumber: String!
+    nationality: String
+    departmentSupervised: ID!
+    department: ID!
+}
+

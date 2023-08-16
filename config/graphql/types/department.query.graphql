@@ -1,0 +1,9 @@
+type DepartmentQuery {
+    department(id: ID): Department!
+    departments: [Department!]
+}
+
+type DepartmentMutation {
+    newDepartment (department: CreateDepartment): Department!
+    updateDepartment (id: ID, department: UpdateDepartment): Department!
+}

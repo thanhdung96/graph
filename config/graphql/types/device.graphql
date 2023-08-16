@@ -1,0 +1,23 @@
+type Device {
+    id: ID!
+    name: String
+    brand: String
+    purchaseDate: String!
+    status: String
+    created: String
+    modified: String
+    deleted: String!
+}
+
+input CreateDevice {
+    name: String
+    brand: String
+    purchaseDate: String
+}
+
+input UpdateDevice {
+    name: String!
+    brand: String!
+    purchaseDate: String!
+    status: String!
+}

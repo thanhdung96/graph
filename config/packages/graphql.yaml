@@ -1,0 +1,18 @@
+overblog_graphql:
+  definitions:
+    schema:
+      device:
+        mutation: DeviceMutation
+        query: DeviceQuery
+      department:
+        mutation: DepartmentMutation
+        query: DepartmentQuery
+      employee:
+        mutation: EmployeeMutation
+        query: EmployeeQuery
+    mappings:
+      types:
+        -
+          type: graphql
+          dir: "%kernel.project_dir%/config/graphql/types"
+          suffix: null
