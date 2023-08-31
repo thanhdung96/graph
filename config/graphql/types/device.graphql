@@ -12,7 +12,8 @@ type Device {
 input CreateDevice {
     name: String
     brand: String
-    purchaseDate: String
+    purchaseDate: String,
+    status: String
 }
 
 input UpdateDevice {

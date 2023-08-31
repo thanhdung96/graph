@@ -21,6 +21,23 @@ class DeviceRepository extends ServiceEntityRepository
         parent::__construct($registry, Device::class);
     }
 
+    public function add(Device $device, bool $flush = false): void {
+        $entityManager = $this->getEntityManager();
+        $entityManager->persist($device);
+        if($flush) {
+            $entityManager->flush();
+        }
+    }
+
+    public function remove(Device $device, bool $flush = false): void {
+        $entityManager = $this->getEntityManager();
+        $entityManager->remove($device);
+
+        if($flush) {
+            $entityManager->flush();
+        }
+    }
+
 //    /**
 //     * @return Device[] Returns an array of Device objects
 //     */

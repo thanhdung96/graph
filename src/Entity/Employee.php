@@ -14,7 +14,6 @@ use Symfony\Component\Uid\Uuid;
 class Employee
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
     #[ORM\Column(length: 36, unique: true)]
     private string $id;
 

@@ -12,7 +12,6 @@ use Symfony\Component\Uid\Uuid;
 class Device
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
     #[ORM\Column(length: 36, unique: true)]
     private string $id;
 
